@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        .input-element {
+            width: 300px;
+            padding: 10px;
+            border: 1px solid blueviolet;
+        }
+
+        #fname {
+            background-color: beige;
+        }
+    </style>
+</head>
+<body>
+
+<h2>HTML Forms</h2>
+<!-- All the form elements need to be inside the form tag-->
+<!-- id are uniques keys assigned to the html elements  and we use these id the to access the dom elemnts from javascript-->
+<!-- id are uniques keys assigned to the html elements  and we use these id the to access the dom elemnts from javascript-->
+<form id="form" name="personalDetails">
+  <label for="fname">First name:</label><br>
+  <input type="text" id="fname" name="fname" value="John" class="input-element"><br>
+  <label for="lname">Last name:</label><br>
+  <input type="text" id="lname" name="lname" value="Doe" class="input-element"><br><br>
+  <input type="radio" id="male" name="gender" value="male">
+  <label for="male">Male</label><br>
+  <input type="radio" id="female" name="gender" value="female">
+  <label for="female">Female</label><br>
+  <input type="radio" id="other" name="gender" value="other">
+  <label for="other">Other</label> <br>
+  <select id="cars" name="cars" class="input-element" multiple>
+    <option value="volvo">Volvo</option>
+    <option selected value="saab">Saab</option>
+    <option value="fiat">Fiat</option>
+    <option value="audi">Audi</option>
+  </select> <br> <br>
+  <textarea name="message" rows="10" cols="30">
+    The cat was playing in the garden.
+    </textarea><br><br>
+  <input type="submit" value="Submit">
+</form> 
+
+<p>If you click the "Submit" button, the form-data will be sent to a page called "/action_page.php".</p>
+
+</body>
+<script>
+    function myfunction(event) {
+        console.log(event);
+        console.log(document.personalDetails);
+    }
+   var form = document.getElementById('form');
+   form.addEventListener('submit', myfunction);
+</script>
+</html>
