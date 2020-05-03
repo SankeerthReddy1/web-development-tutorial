@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+    <style>
+body, html {
+  height: 100%;
+  margin: 0;
+}
+
+.bg {
+  background-image: url("https://images-stag.jazelc.com/uploads/enterprisecarsalesspd-sherwin/camry.jpg");
+  height: 100%; 
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+</style>
+    </head>
+<body>
+
+<h1 style='text-align:center;border:2px solid red;'>Car Sales</h1>
+
+<h2>Information:</h2>
+    <div class="bg">
+<form action="action_page.html" oninput="x.value=parseInt(a.value)+parseInt(b.value)+parseInt(c.value)" method="post" autocomplete="on">
+<fieldset>
+<legend><b>Personal Information:</b></legend>
+  <label for="fnam">First Name:</label><br>
+  <input type="text" id="fnam" name="fname" value="Sanky" autofocus><br>
+  <label for="lnam">Last Name:</label><br>
+  <input type="text" id="lnam" name="Lname" value="reddy"><br><br>
+  <label for="birthday"> DOB:</label>
+  <input type="date" id="birthday" name="birthday" min="2000-01-01"><br><br>
+  <label for="gend">Gender:</label><br>
+  <label for="male">Male</label><br>
+  <input type="radio" id="male" name="gender" value="male"><br>
+  <label for="female">Female</label><br>
+  <input type="radio" id="female" name="gender" value="female">
+  <p>Enter your Email and Password<br>
+  <label for="email">Email Id:</label><br>
+  <input type="email" id="email" name="email" placeholder="abcd@xyz.com"><br>
+  <label for="pwd">Password:</label><br>
+  <input type="password" id="pwd" name="pwd"><br>
+  </p>
+  <label for:"phone">Mobile Number:</label><br>
+  <input type="tel" id="phone" name="phone" placeholder="321-435-5323" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required><br>
+  <p>Levels of Education Completed:<br>
+  <input type="checkbox" id="Educ" name="study">
+  <label for="Educ">10th grade</label><br>
+  <input type="checkbox" id="Educ" name="study">
+  <label for="Educ">Intermediate</label><br>
+  <input type="checkbox" id="Educ" name="study">
+  <label for="Educ">Undergraduate</label><br>
+  <input type="checkbox" id="Educ" name="study">
+  <label for="Educ">Graduate</label><br>
+  <input type="checkbox" id="Educ" name="study">
+  <label for="Educ">P.hD</label><br>
+  <input type="checkbox" id="Educ" name="study">
+  <label for="Educ">M.Sc</label><br>
+  </p>
+  </fieldset>
+  <label for="cars">Choose a car:</label><br>
+  <select id="cars" name="cars" size="4" multiple>
+  <option value="volvo">Volvo</option>
+  <option value="fiat" selected>Fiat</option>
+  <option value="Volks">Volkswagen</option>
+  <option value="bmw">BMW</option><br><br>
+  </select><br>
+  <label for="about">Do you have any other preferences:</label><br>
+  <textarea id="about" name="message" rows="3" cols="20"></textarea><br>
+  <button type="button" onclick="alert('Details Submitted')">Hit me!</button><br>
+  <p>Select your Vehicle color preference:<br>
+  <label for="choice">Color Choice:</label>
+  <input type="color" id="choice" name="choice"><br></p>
+  
+  <label for="Price">Please choose your specific price range:</label><br>
+  <input list="Prices" name="PriceRanges">
+  <datalist id="Prices">
+  <option value="0-10000$">
+  <option value="10000$-20000$">
+  <option value="20000$-30000$">
+  <option value="30000$-40000$">
+  <option value="40000$-50000$">
+  <option value="Above 50000$">
+  </datalist><br><br>
+  <label for="budget">Enter your exact budget:</label><br>
+  Checkings = 0 <input type="range" id="a" name="a" value=" " min="0" max="5000">5000 +
+  Savings = <input type="number" id="b" name="b" value=" " min="0" max="20000" step="10"> +
+  Credit = <input type="number" id="c" name="c" value=" " min="0" max="50000" step="100"><br><br>
+  <input type="button" id="Tot" value="Grand Total($)" onclick="myBalance()"><br>
+  Total=<input type="text" id="total" name="Expense" value=" ">
+  <output name="x" for="a b c"></output><br><br>
+  <label for="proof">Select a file:</label>
+  <input type="file" id="proof" name="proof"><br><br>
+  <input type="submit" value="Submit">
+  <input type="reset"><br>
+    <p>Please Click the Submit Button to Submit the Form.</p>
+    
+   </form>
+    </div>
+
+   <script>
+   function myBalance(){
+   var v1=parseInt(document.getElementById("a").value);
+   var v2=parseInt(document.getElementById("b").value);
+   var v3=parseInt(document.getElementById("c").value);
+   var total=document.getElementById("total");
+   total.value=v1+v2+v3;}
+   </script>
+ 
+
+
+</body>
+</html>
